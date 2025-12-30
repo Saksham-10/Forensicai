@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Optional: Make the background truly dark forensic style */
+body {
+  background-color: #0B0B0F; /* Deep matte black */
+  color: #ffffff;
+}
+
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+  background: radial-gradient(circle at top, #0f172a, #020617);
+  color: #e5e7eb;
+}
+
+.app {
+  padding: 32px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+}
+
+input {
+  padding: 10px;
+  background: #020617;
+  border: 1px solid #334155;
+  color: white;
+  border-radius: 6px;
+}
+
+button {
+  padding: 10px 16px;
+  background: #22c55e;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.kpis {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.card {
+  background: rgba(2, 6, 23, 0.9);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 30px rgba(79, 70, 229, 0.15);
+}
+
+.panel {
+  margin-top: 30px;
+  padding: 24px;
+  background: rgba(2, 6, 23, 0.9);
+  border-radius: 16px;
+}
+
+.explain {
+  border-left: 4px solid #22c55e;
+}
+
+.loading {
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.4 }
+  50% { opacity: 1 }
+  100% { opacity: 0.4 }
+}

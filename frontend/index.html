@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Forensic Trading Dashboard</title>
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="dashboard">
+
+    <!-- Header -->
+    <header class="header">
+      <h1>AI-Based Intraday Trading Surveillance</h1>
+      <div class="input-group">
+        <input id="ticker" placeholder="Enter Ticker (e.g. RELIANCE.NS)" value="RELIANCE.NS">
+        <button onclick="runAnalysis()">Run Analysis</button>
+      </div>
+    </header>
+
+    <!-- KPI Cards -->
+    <section class="kpi-grid">
+      <div class="kpi-card">
+        <h3>Total Data Points</h3>
+        <p id="totalPoints">—</p>
+      </div>
+
+      <div class="kpi-card">
+        <h3>Anomalies Detected</h3>
+        <p id="anomalyCount">—</p>
+      </div>
+
+      <div class="kpi-card">
+        <h3>Risk Level</h3>
+        <p id="riskLevel">—</p>
+      </div>
+    </section>
+
+    <!-- Chart Section -->
+  <div class="chart-glow"></div>
+
+    <section class="chart-section">
+      <canvas id="priceChart"></canvas>
+    </section>
+
+    <!-- Explanation -->
+    <section class="explanation">
+      <h2>AI Explanation</h2>
+      <p id="explanationText">
+        Run analysis to view forensic insights.
+      </p>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
