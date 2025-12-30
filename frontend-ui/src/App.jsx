@@ -429,7 +429,11 @@ const App = () => {
     setLoading(true);
     setMode("Live");
     try {
-      const response = await axios.get(`http://localhost:8000/analyze?ticker=${ticker}&sensitivity=${sensitivity}`);
+const API_BASE = "https://forensicai-backend.onrender.com";
+
+const response = await axios.get(
+  `${API_BASE}/analyze?ticker=${ticker}&sensitivity=${sensitivity}`
+);
       setData(response.data);
     } catch (error) {
       console.error(error);
@@ -450,7 +454,11 @@ const App = () => {
     setLoading(true);
     setMode("Deep Scan");
     try {
-      const response = await axios.get(`http://localhost:8000/deep-scan?ticker=${searchTicker}&sensitivity=${sensitivity}`);
+const API_BASE = "https://forensicai-backend.onrender.com";
+
+const response = await axios.get(
+  `${API_BASE}/analyze?ticker=${ticker}&sensitivity=${sensitivity}`
+);
       setData(response.data);
     } catch (error) {
       alert("Deep Scan Error");
@@ -464,7 +472,11 @@ const App = () => {
       setLoadingExplanation(true);
       setExplanation(""); 
       try {
-          const response = await axios.get(`http://localhost:8000/explain?ticker=${data.ticker}&sensitivity=${sensitivity}`);
+const API_BASE = "https://forensicai-backend.onrender.com";
+
+const response = await axios.get(
+  `${API_BASE}/analyze?ticker=${ticker}&sensitivity=${sensitivity}`
+);
           setExplanation(response.data.explanation);
       } catch (error) {
           setExplanation("AI Connection Failed. Please ensure Backend is running.");
